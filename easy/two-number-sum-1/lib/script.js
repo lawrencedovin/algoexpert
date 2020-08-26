@@ -4,9 +4,7 @@ function twoNumberSum(array, targetSum) {
         let firstNum = array[i];
         for(let j = i + 1; j < array.length; j++){
             let secondNum = array[j];
-            if(firstNum + secondNum === targetSum){
-                return [firstNum, secondNum];
-            }
+            if(firstNum + secondNum === targetSum) return [firstNum, secondNum];
         }
     }
     return [];
