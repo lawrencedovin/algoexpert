@@ -1,5 +1,5 @@
 // O(n) time | O(n) space
-function twoNumberSum(array, targetSum) {
+  function twoNumberSum(array, targetSum) {
     const nums = {};
     for(const num of array) {
         const potentialMatch = targetSum - num;
