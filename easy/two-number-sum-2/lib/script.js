@@ -4,11 +4,8 @@
     for(const num of array) {
         const potentialMatch = targetSum - num;
         // y = targetSum - x;
-        if (potentialMatch in nums) {
-            return [potentialMatch, num];
-        } else {
-            nums[num] = true;
-        }
+        if (potentialMatch in nums) return [potentialMatch, num];
+        else nums[num] = true;
     }
     return [];
   }
