@@ -1,3 +1,24 @@
+// O(n) time | O(1) space - where n is the length of the array
+
+function isValidSubsequence(array, sequence) {
+  // Write your code here.
+	let arrayIndex = 0;
+	let sequenceIndex = 0;
+	
+	while(arrayIndex < array.length && sequenceIndex < sequence.length){
+		if(array[arrayIndex] === sequence[sequenceIndex]) sequenceIndex++;
+		arrayIndex++
+  }
+  
+	return sequenceIndex === sequence.length;
+}
+
+const array = [5, 1, 22, 25, 6, -1, 8, 10];
+const sequence = [1, 8, -1, 10];
+console.log(isValidSubsequence(array, sequence));
+
+///////////////////////////////////////////////////////////////////////////////
+
 // Unordered
 // function isValidSubsequence(array, sequence) {
 //   // Write your code here.
@@ -15,21 +36,11 @@
 //   return true;
 // }
 
+// const index = array.indexOf(5);
+// if (index > -1) {
+//   array.splice(index, 1);
+// }
+
 // const array = [5, 1, 22, 25, 6, -1, 8, 10];
 // const sequence = [1, 8, -2, 10];
 // console.log(isValidSubsequence(array, sequence));
-
-function isValidSubsequence(array, sequence) {
-  // Write your code here.
-  let arrIdx = 0;
-  let seqIdx = 0;
-  while(arrIdx < array.length && seqIdx < sequence.length) {
-    if(array[arrIdx] == sequence[seqIdx]) seqIdx++;
-    arrIdx++;
-  }
-  return sequence.length === seqIdx;
-}
-
-const array = [5, 1, 22, 25, 6, -1, 8, 10];
-const sequence = [1, 8, -1, 10];
-console.log(isValidSubsequence(array, sequence));
